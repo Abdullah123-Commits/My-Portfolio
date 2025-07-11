@@ -33,4 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth'
     });
   });
+  //GO TO PROJECTS BUTTON FUNCTIONALITY
+  const projectBtn = document.getElementById('goToProjectsBtn');
+
+  projectBtn.addEventListener('click', function () {
+      window.location.href = 'projects.html';
+  });
+
 });
