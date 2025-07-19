@@ -110,6 +110,10 @@
 #intro h2 {
     color: white;
 }
+#everyFirstSummerThing h2 {
+    color:white;
+    margin-left: 0.8%;
+}
 /*=============================================================================================================*/
 #main-footer h4 {
     color: orange;
