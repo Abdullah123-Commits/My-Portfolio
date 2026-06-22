@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const setThemeBtn = document.querySelector('.theme-switch');
 
-  // 🟡 STEP 1: Check if user had already selected a theme before
+  // Check if user had already selected a theme before
   const savedTheme = localStorage.getItem('theme');
 
   if (savedTheme === 'dark') {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setThemeBtn.value = 'TryDark';
   }
 
-  // 🔵 STEP 2: When user clicks the theme button
+  //  When user clicks the theme button
   setThemeBtn.addEventListener('click', function () {
     document.body.classList.toggle('dark-theme');
 
