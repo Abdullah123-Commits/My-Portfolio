@@ -1,0 +1,172 @@
+/* ==========================================================================
+   MODERN COLOR PALETTE (CSS VARIABLES)
+   ========================================================================== */
+:root {
+    --bg-color: #f8fafc;        /* Soft off-white */
+    --text-color: #334155;      /* Slate dark gray */
+    --card-bg: #ffffff;         /* White cards */
+    --accent-color: #2563eb;    /* Professional Blue */
+    --accent-hover: #1d4ed8;    /* Darker blue for hover */
+    --border-radius: 8px;
+}
+
+/* Dark Mode Variables */
+body.dark-theme {
+    --bg-color: #0f172a;        /* Deep slate background */
+    --text-color: #e2e8f0;      /* Light gray text */
+    --card-bg: #1e293b;         /* Darker card background */
+    --accent-color: #3b82f6;    /* Lighter blue for dark mode */
+}
+
+/* ==========================================================================
+   GLOBAL STYLES
+   ========================================================================== */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================================================
+   HEADER & DIVIDERS
+   ========================================================================== */
+#main-header {
+    background-color: var(--card-bg);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+#main-header h1 {
+    margin: 0;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+#themeDivider {
+    text-align: center;
+    padding: 15px 0;
+    background-color: var(--bg-color);
+}
+
+/* ==========================================================================
+   CONTAINERS & CARDS (The Modern Look)
+   ========================================================================== */
+.myContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: background-color 0.3s ease;
+}
+
+h2 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+/* ==========================================================================
+   IMAGES & LISTS
+   ========================================================================== */
+#passportPic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Perfect circle */
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid var(--accent-color);
+}
+
+.list {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;
+}
+
+.list-item {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 24px;
+    margin-right: 10px;
+}
+
+/* ==========================================================================
+   BUTTONS (Modern Hover Effects)
+   ========================================================================== */
+.myButton, .myLink {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.myButton:hover, .myLink:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px); /* Makes button 'lift' up slightly */
+    color: white; /* Ensures text stays white on hover */
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+#main-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--card-bg);
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+#main-footer h4 {
+    margin: 10px 0 0 0;
+    color: var(--text-color);
+}
+
+/* ==========================================================================
+   PROJECTS PAGE (.showcaseProject Cards)
+   ========================================================================== */
+.showcaseProject {
+    background-color: var(--card-bg);
+    padding: 25px;
+    margin: 20px auto; /* Centers the card */
+    max-width: 800px;  /* Keeps it the same width as homepage containers */
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-left: 5px solid var(--accent-color); /* Adds a professional colored bar on the left edge */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Make the project card lift up slightly when you hover over it */
+.showcaseProject:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.showcaseProject h3 {
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+.showcaseProject p {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
